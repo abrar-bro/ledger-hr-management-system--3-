@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ledger HR — Attendance Kiosk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/pos.css" />
+</head>
+<body>
+  <div class="kiosk">
+    <header class="kiosk-header">
+      <div class="kiosk-brand">
+        <span class="kiosk-brand-mark">⏱</span>
+        <span>Ledger HR <em>Kiosk</em></span>
+      </div>
+      <div class="kiosk-clock">
+        <div id="kiosk-time" class="kiosk-time">--:--:--</div>
+        <div id="kiosk-date" class="kiosk-date">Loading…</div>
+      </div>
+    </header>
+
+    <main class="kiosk-main">
+      <section class="punch-panel">
+        <label class="punch-label" for="kiosk-search">Enter your Employee ID or name</label>
+        <input
+          id="kiosk-search"
+          class="punch-input"
+          type="text"
+          autocomplete="off"
+          placeholder="EMP-1001 or Sarah Chen"
+        />
+
+        <div class="keypad" id="keypad" aria-label="Numeric keypad">
+          <!-- filled by pos.js -->
+        </div>
+
+        <div id="punch-status" class="punch-status">Waiting for ID…</div>
+      </section>
+
+      <section class="employee-panel">
+        <div id="employee-card" class="employee-card empty">
+          <div class="employee-placeholder">
+            <span class="employee-placeholder-icon">🪪</span>
+            Employee details will appear here once found.
+          </div>
+        </div>
+
+        <div class="punch-actions">
+          <button id="btn-in" class="kiosk-btn kiosk-btn-in" disabled>Clock In</button>
+          <button id="btn-break-start" class="kiosk-btn kiosk-btn-break-start" disabled>Start Break</button>
+          <button id="btn-break-end" class="kiosk-btn kiosk-btn-break-end" disabled>End Break</button>
+          <button id="btn-out" class="kiosk-btn kiosk-btn-out" disabled>Clock Out</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="kiosk-footer">
+      <h2 class="kiosk-footer-title">Today's punches</h2>
+      <ul id="punch-log" class="punch-log">
+        <li class="punch-log-empty">No punches yet today.</li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="/pos.js"></script>
+</body>
+</html>
