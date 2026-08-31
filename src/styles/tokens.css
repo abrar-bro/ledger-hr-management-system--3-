@@ -1,0 +1,35 @@
+:root {
+  /* ink — sidebar, headers, primary text */
+  --ink-950: #2a1015;
+  --ink-800: #3d1a20;
+  --ink-600: #6b3540;
+  --ink-400: #9c6b73;
+
+  /* paper — canvas + card surfaces, the "punch card" base */
+  --paper-050: #f7f0ee;
+  --paper-100: #ecdcd8;
+  --paper-200: #dfc5be;
+  --line-300: #d4b8b0;
+  
+  /* amber — the clock / stamp accent */
+  --amber-500: #e3993c;
+  --amber-600: #c97f27;
+  --amber-100: #f8e3c0;
+
+  /* status */
+  --green-600: #4b8f63;
+  --green-100: #dcebe0;
+  --red-500: #bd4f3c;
+  --red-100: #f3ddd6;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --shadow-card: 0 1px 0 rgba(28, 36, 48, 0.04), 0 12px 24px -16px rgba(28, 36, 48, 0.28);
+  --sidebar-w: 236px;
+}
